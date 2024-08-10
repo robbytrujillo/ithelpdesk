@@ -62,12 +62,12 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="<?= base_url() ?>assets/back/#">
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">
+          <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="<?= base_url() ?>assets/back/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -83,7 +83,7 @@
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">
+          <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="<?= base_url() ?>assets/back/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -99,7 +99,7 @@
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">
+          <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="<?= base_url() ?>assets/back/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -171,7 +171,7 @@
           <img src="<?= base_url() ?>assets/back/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url() ?>assets/back/#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
 
@@ -181,7 +181,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link active">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -273,7 +273,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Charts
@@ -302,7 +302,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 UI Elements
@@ -361,7 +361,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Forms
@@ -472,7 +472,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Pages
@@ -615,20 +615,20 @@
           </li>
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/https://adminlte.io/docs/3.0" class="nav-link">
+            <a href="https://adminlte.io/docs/3.0" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Documentation</p>
             </a>
           </li>
           <li class="nav-header">MULTI LEVEL EXAMPLE</li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>Level 1</p>
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-circle"></i>
               <p>
                 Level 1
@@ -637,13 +637,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Level 2</p>
                 </a>
               </li>
               <li class="nav-item has-treeview">
-                <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>
                     Level 2
@@ -652,19 +652,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                    <a href="#" class="nav-link">
                       <i class="far fa-dot-circle nav-icon"></i>
                       <p>Level 3</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                    <a href="#" class="nav-link">
                       <i class="far fa-dot-circle nav-icon"></i>
                       <p>Level 3</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                    <a href="#" class="nav-link">
                       <i class="far fa-dot-circle nav-icon"></i>
                       <p>Level 3</p>
                     </a>
@@ -672,7 +672,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Level 2</p>
                 </a>
@@ -680,26 +680,26 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>Level 1</p>
             </a>
           </li>
           <li class="nav-header">LABELS</li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
               <p class="text">Important</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
               <p>Warning</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
               <p>Informational</p>
             </a>
@@ -722,7 +722,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?= base_url() ?>assets/back/#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
@@ -747,7 +747,7 @@
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="<?= base_url() ?>assets/back/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -762,7 +762,7 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="<?= base_url() ?>assets/back/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -777,7 +777,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="<?= base_url() ?>assets/back/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -792,7 +792,7 @@
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="<?= base_url() ?>assets/back/#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
