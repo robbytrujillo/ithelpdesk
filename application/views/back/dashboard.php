@@ -1047,11 +1047,11 @@
 
                 <div class="card-tools">
                   <ul class="pagination pagination-sm">
-                    <li class="page-item"><a href="<?= base_url() ?>assets/back/#" class="page-link">&laquo;</a></li>
-                    <li class="page-item"><a href="<?= base_url() ?>assets/back/#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="<?= base_url() ?>assets/back/#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="<?= base_url() ?>assets/back/#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="<?= base_url() ?>assets/back/#" class="page-link">&raquo;</a></li>
+                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
                   </ul>
                 </div>
               </div>
@@ -1290,10 +1290,10 @@
                     <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
                       <i class="fas fa-bars"></i></button>
                     <div class="dropdown-menu float-right" role="menu">
-                      <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">Add new event</a>
-                      <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">Clear events</a>
+                      <a href="#" class="dropdown-item">Add new event</a>
+                      <a href="#" class="dropdown-item">Clear events</a>
                       <div class="dropdown-divider"></div>
-                      <a href="<?= base_url() ?>assets/back/#" class="dropdown-item">View calendar</a>
+                      <a href="#" class="dropdown-item">View calendar</a>
                     </div>
                   </div>
                   <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
@@ -1323,7 +1323,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="<?= base_url() ?>assets/back/http://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.4
