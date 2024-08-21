@@ -8,6 +8,6 @@ class Dashboard extends CI_Controller {
     }
 
     function login() {
-        
+        $this->load->view('back/login');
     }
 }
