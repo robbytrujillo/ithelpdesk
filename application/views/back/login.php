@@ -27,8 +27,8 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body" style="border-radius: 90%">
-      <!-- <p class="login-box-msg">Sign in to start your session</p> -->
-       <img src="assets/back/images/ithelpdesk-logo.png" width="200px" height="70px">
+      <p class="login-box-msg">Sign in to start your session</p>
+       <!-- <img src="assets/back/images/ithelpdesk-logo.png" width="200px" height="70px"> -->
 
       <form action="../../index3.html" method="post">
         <div class="input-group mb-3">
