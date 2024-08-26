@@ -7,7 +7,4 @@ class Dashboard extends CI_Controller {
         $this->template->load('back/template', 'back/dashboard');
     }
 
-    function login() {
-        $this->load->view('back/login');
-    }
 }
