@@ -22,7 +22,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Regis</b>ter</a>
+    <a href="<?= base_url() ?>assets/back/index2.html"><b>Regis</b>ter</a>
   </div>
 
   <div class="card">
@@ -64,12 +64,13 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
+            <a href="login.html" class="text-center">I already have a membership</a>
+            <!-- <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
               <label for="agreeTerms">
                I agree to the <a href="#">terms</a>
               </label>
-            </div>
+            </div> -->
           </div>
           <!-- /.col -->
           <div class="col-4">
@@ -79,19 +80,19 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center">
-        <p>- OR -</p>
+      <!-- <div class="social-auth-links text-center"> -->
+        <!-- <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i>
           Sign up using Facebook
         </a>
         <a href="#" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i>
-          Sign up using Google+
-        </a>
-      </div>
+          Sign up using Google+ -->
+        <!-- </a>
+      </div> -->
 
-      <a href="login.html" class="text-center">I already have a membership</a>
+      
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
