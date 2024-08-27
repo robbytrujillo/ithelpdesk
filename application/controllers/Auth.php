@@ -38,7 +38,7 @@ class Auth extends CI_Controller {
 
             $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
 
-            redirect('auth/login','refresh')
+            redirect('auth/login','refresh');
         } else {
             # code
         }
