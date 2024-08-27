@@ -23,24 +23,24 @@ class Auth extends CI_Controller {
 
         $this->form_validation->set_message('required','{field} Harus diisi');
 
-        $this->form_validation->set_error_delimeters('<div class="alert alert-danger">','</div>');
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
 
         if ($this->form_validation->run() == TRUE) {
             $data = array(
                 'username'=> $this->input->post('username'),
                 'email'=> $this->input->post('email'),
-                'password'=> $this->input->post('password'),
+                'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                 'status_user' => 1,
                 'level_user' => 1,
             );
 
-            var_dump($data);
+            // var_dump($data);
 
-            // $this->M_auth->insert($data);
+            $this->M_auth->insert($data);
 
-            // $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
+            $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
 
-            // redirect('auth/login','refresh');
+            redirect('auth/login','refresh');
         } else {
             $this->load->view('back/register');
         }
