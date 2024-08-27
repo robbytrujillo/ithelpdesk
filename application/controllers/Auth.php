@@ -34,13 +34,15 @@ class Auth extends CI_Controller {
                 'level_user' => 1,
             );
 
-            $this->M_auth->insert($data);
+            var_dump($data);
 
-            $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
+            // $this->M_auth->insert($data);
 
-            redirect('auth/login','refresh');
+            // $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
+
+            // redirect('auth/login','refresh');
         } else {
-            # code
+            $this->load->view('back/register');
         }
     }
 }
