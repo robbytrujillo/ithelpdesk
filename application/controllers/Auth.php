@@ -17,12 +17,12 @@ class Auth extends CI_Controller {
 
     function proses_register() {
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'trim|required', 'valid_email|is_unique[user.email]');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required');
-        $this->form_validation->set_rules('confirm_password', 'Confirm password', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[user.email]|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
+        $this->form_validation->set_rules('confirm_password', 'Confirm password', 'trim|matches[password]|required');
 
         $this->form_validation->set_message('required','{field} Harus diisi');
-        $this->form_validation->set_message('valid_email','{field} Email anda harus valid');
+        $this->form_validation->set_message('valid_email','{field} anda harus valid');
 
         $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
 
