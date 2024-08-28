@@ -22,6 +22,7 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('confirm_password', 'Confirm password', 'trim|required');
 
         $this->form_validation->set_message('required','{field} Harus diisi');
+        $this->form_validation->set_message('valid_email','{field} Email anda harus valid');
 
         $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
 
