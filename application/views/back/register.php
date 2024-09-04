@@ -29,7 +29,7 @@
     <div class="card-body register-card-body" style="border-radius: 90%">
       <p class="login-box-msg">Register a new membership</p>
       
-      <?= $this->session->flashdata('message'); ?>
+      <?= $this->session->flashdata('message') ?>
       <?php validation_errors() ?>
       <form action="<?= base_url('auth/proses_register') ?>" method="post">
         <div class="input-group mb-3">
