@@ -17,7 +17,7 @@ class Auth extends CI_Controller {
 
     function proses_register() {
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[user.email]|required');
+        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[users.email]|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|matches[password]|required');
 
