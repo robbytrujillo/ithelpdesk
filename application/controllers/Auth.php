@@ -46,4 +46,19 @@ class Auth extends CI_Controller {
             $this->load->view('back/register');
         }
     }
+
+    function proses_login() {
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+
+        if ($this->form_validation->run() == TRUE) {
+            $user = $this->M_auth->get_email_user($this->input->post('email'));
+            if (!$user) {
+                $this->session->set_flashdata('message','<div class="alert alert-danger">Email tidak ditemukan</div>');
+                redirect('auth/login','refresh');
+            }
+        } else {
+
+        }
+    }
 }
