@@ -56,12 +56,25 @@ class Auth extends CI_Controller {
             if (!$user) {
                 $this->session->set_flashdata('message','<div class="alert alert-danger">Email tidak ditemukan</div>');
                 redirect('auth/login','refresh');
-            } else if ($user->status == '0'){
-                $this->session->set_flashdata('message','<div class="alert alert-danger">Email tidak ditemukan</div>');
+            } else if ($user->status_user == '0'){
+                $this->session->set_flashdata('message','<div class="alert alert-danger">User tidak aktif, Silahkan hubungi Admin</div>');
                 redirect('auth/login','refresh');
+            } else if (!password_verify($this->input->post('password'), $user->password)) {
+                $this->session->set_flashdata('message','<div class="alert alert-danger">Password Anda Salah!</div>');
+                redirect('auth/login','refresh');
+            } else {
+                $session = array(
+                    'id_user'    => $user->id_user,
+                    'username'   => $user->username,
+                    'email'      => $user->email,
+                    'level_user' => $user->level_user,
+                );
+                $this->session->set_userdata($session);
+                redirect('dashboard');
             }
         } else {
-
+            $data['title'] = 'Login Pages';
+            $this->load->view('back/register', $data);
         }
     }
 }
