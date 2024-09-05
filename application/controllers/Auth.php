@@ -56,6 +56,9 @@ class Auth extends CI_Controller {
             if (!$user) {
                 $this->session->set_flashdata('message','<div class="alert alert-danger">Email tidak ditemukan</div>');
                 redirect('auth/login','refresh');
+            } else if ($user->status == '0'){
+                $this->session->set_flashdata('message','<div class="alert alert-danger">Email tidak ditemukan</div>');
+                redirect('auth/login','refresh');
             }
         } else {
 
