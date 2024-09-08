@@ -64,7 +64,7 @@ class Auth extends CI_Controller {
                 redirect('auth/login','refresh');
             } else {
                 $session = array(
-                    'id_user'    => $user->id_user,
+                    'id_users'    => $user->id_users,
                     'username'   => $user->username,
                     'email'      => $user->email,
                     'level_user' => $user->level_user,
