@@ -28,10 +28,10 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <!-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= base_url() ?>assets/back/./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -50,9 +50,11 @@
                   <p>Dashboard v3</p>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </li>
-          <li class="nav-item">
+          <li class="nav-header">DATA MASTER</li>
+
+          <!-- <li class="nav-item">
             <a href="<?= base_url() ?>assets/back/pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -60,8 +62,8 @@
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
-          </li>
-          <li class="nav-item has-treeview">
+          </li> -->
+          <!-- <li class="nav-item has-treeview">
             <a href="<?= base_url() ?>assets/back/#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
@@ -372,12 +374,12 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item has-treeview">
             <a href="<?= base_url() ?>assets/back/#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
+              <i class="nav-icon fas fa-copy"></i>
               <p>
-                Extras
+                Master Karyawan
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -385,78 +387,70 @@
               <li class="nav-item">
                 <a href="<?= base_url() ?>assets/back/pages/examples/login.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
+                  <p>Data Departemen</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= base_url() ?>assets/back/pages/examples/register.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
+                  <p>Data Jabatan</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= base_url() ?>assets/back/pages/examples/forgot-password.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Forgot Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/recover-password.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Recover Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/lockscreen.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lockscreen</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/language-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Language Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/pace.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pace</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
+                  <p>Data Karyawan</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-header">MISCELLANEOUS</li>
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Master Ticket
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url() ?>assets/back/pages/examples/login.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Ticket</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">LAPORAN TICKET</li>
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Laporan
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">PROFILE</li>
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Profile User
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Log Out
+              </p>
+            </a>
+            
+          </li>
+          <!-- <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="https://adminlte.io/docs/3.0" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
@@ -546,7 +540,7 @@
               <i class="nav-icon far fa-circle text-info"></i>
               <p>Informational</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
