@@ -23,11 +23,15 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php 
+                                $no = 1;
+                                foreach($jabatan as $row) { ?>
                                 <tr>
-                                    <td>
-
-                                    </td>
+                                    <td><?= $no++ ?></td>
+                                    <td><?= $row->jabatan ?></td>
+                                    <td>Edit | Delete</td>
                                 </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
