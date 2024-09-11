@@ -31,8 +31,10 @@
       <!-- Notifications Dropdown Menu -->
       
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="<?= base_url() ?>assets/back/#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link">
+        <!-- <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="<?= base_url() ?>assets/back/#" role="button"> -->
+          <!-- <i class="fas fa-th-large"></i> -->
+          <b><?= $this->session->username; ?></b>
         </a>
       </li>
     </ul>
