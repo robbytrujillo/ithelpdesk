@@ -13,7 +13,10 @@
                     <div class="card-header">
                         <h3 class="card-title">Tambah Jabatan</h3>
                     </div>
+                    
                     <div class="card-body">
+                    <?= $this->session->flashdata('message') ?>
+                    <?= validation_errors() ?>
                         <form action="<?= base_url('jabatan/save_jabatan') ?>" method="POST">
                             <div class="form-group">
                                 <label>Jabatan</label>
