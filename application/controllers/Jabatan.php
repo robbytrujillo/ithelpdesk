@@ -30,6 +30,18 @@ class Jabatan extends CI_Controller {
             $this->index();
         }
     }
+
+    function edit_jabatan($id) {
+        $data['jbt'] = $this->M_jabatan->get_id_jabatan($id);
+
+        if ($data['jbt']) {
+            $this->template->load('back/template', 'back/jabatan/edit_jabatan', $data);
+        } else {
+            $this->session->set_flashdata('message','<div class="alert alert-danger">Data Tidak Ada!</div>');
+
+            redirect('jabatan','refresh');
+        }
+    }
 }
 
 ?>
