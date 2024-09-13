@@ -31,7 +31,7 @@
             <div class="col-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Data Jabatan</h3>
+                        <h3 class="card-title"><b style="color: #0069D9">Data Jabatan</b></h3>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
@@ -49,7 +49,10 @@
                                 <tr>
                                     <td><?= $no++ ?></td>
                                     <td><?= $row->jabatan ?></td>
-                                    <td>Edit | Delete</td>
+                                    <td>
+                                        <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-primary btn-small">Edit</a>
+                                        | Delete
+                                    </td>
                                 </tr>
                                 <?php } ?>
                             </tbody>
