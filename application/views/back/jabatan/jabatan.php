@@ -50,7 +50,9 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $row->jabatan ?></td>
                                     <td>
-                                        <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-primary btn-small">Edit</a>
+                                        <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-warning btn-small">
+                                        <i class="fa fa-edit"> Edit</i>    
+                                        </a>
                                         | Delete
                                     </td>
                                 </tr>

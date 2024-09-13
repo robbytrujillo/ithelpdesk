@@ -17,12 +17,13 @@
                     <div class="card-body">
                     <?= $this->session->flashdata('message') ?>
                     <?= validation_errors() ?>
-                        <form action="<?= base_url('jabatan/save_jabatan') ?>" method="POST">
+                        <form action="<?= base_url('jabatan/update_jabatan') ?>" method="POST">
                             <div class="form-group">
                                 <label>Jabatan</label>
+                                <input type="hidden" name="id_jabatan" value="<?= $jbt->id_jabatan ?>" class="form-control">
                                 <input type="text" name="jabatan" value="<?= $jbt->jabatan ?>" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-sm"> Save </button>
+                            <button type="submit" class="btn btn-primary btn-sm"> Update </button>
                             <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
                         </form>
                     </div>
@@ -50,7 +51,9 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $row->jabatan ?></td>
                                     <td>
-                                        <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-primary btn-small">Edit</a>
+                                        <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-warning btn-small">
+                                            <i class="fa fa-edit"> Edit</i> 
+                                        </a>
                                         | Delete
                                     </td>
                                 </tr>

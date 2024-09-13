@@ -44,6 +44,17 @@ class Jabatan extends CI_Controller {
             redirect('jabatan','refresh');
         }
     }
+
+    function update_jabatan() {
+        $data = [
+            'jabatan' => $this->input->post('jabatan')
+        ];
+
+        $this->M_jabatan->update($this->input->post('id_jabatan'), $data);
+        
+        $this->session->set_flashdata('message','<div class="alert alert-success">Data berhasil diubah!</div>');
+        redirect('jabatan','refresh');
+    }
 }
 
 ?>

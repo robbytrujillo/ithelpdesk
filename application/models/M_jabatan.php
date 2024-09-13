@@ -15,4 +15,9 @@ class M_jabatan extends CI_Model {
         $this->db->where('id_jabatan', $id);
         return $this->db->get('jabatan')->row();
     }
+
+    function update($id, $data) {
+        $this->db->where('id_jabatan', $id);
+        $this->db->update('jabatan', $data);
+    }
 }
