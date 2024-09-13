@@ -35,6 +35,8 @@ class Jabatan extends CI_Controller {
         $data['jbt'] = $this->M_jabatan->get_id_jabatan($id);
 
         if ($data['jbt']) {
+            $data['jabatan'] = $this->M_jabatan->get_jabatan();
+            
             $this->template->load('back/template', 'back/jabatan/edit_jabatan', $data);
         } else {
             $this->session->set_flashdata('message','<div class="alert alert-danger">Data Tidak Ada!</div>');
