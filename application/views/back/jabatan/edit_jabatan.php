@@ -52,9 +52,11 @@
                                     <td><?= $row->jabatan ?></td>
                                     <td>
                                         <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-warning btn-small">
-                                            <i class="fa fa-edit"> Edit</i> 
+                                            <i class="fa fa-edit"></i> 
                                         </a>
-                                        | Delete
+                                        <a href="<?= base_url('jabatan/delete_jabatan/'.$row->id_jabatan) ?>" class="btn btn-danger btn-small">
+                                            <i class="fa fa-trash"></i> 
+                                        </a>
                                     </td>
                                 </tr>
                                 <?php } ?>
