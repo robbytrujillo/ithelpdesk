@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Data Jabatan</b></h3>
                     </div>
@@ -63,7 +63,8 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> -->
+            <?php $this->load->view('back/jabatan/data_jabatan') ?>
             </div>
         </div>
     </section>
