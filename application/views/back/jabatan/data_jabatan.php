@@ -23,7 +23,7 @@
                                         <a href="<?= base_url('jabatan/edit_jabatan/'.$row->id_jabatan) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
                                         </a> 
-                                        <a href="<?= base_url('jabatan/delete_jabatan/'.$row->id_jabatan) ?>" class="btn btn-danger btn-small">
+                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('jabatan/delete_jabatan/'.$row->id_jabatan) ?>" class="btn btn-danger btn-small">
                                         <i class="fa fa-trash"></i>    
                                         </a>
                                     </td>
