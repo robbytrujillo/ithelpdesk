@@ -57,7 +57,7 @@ class Jabatan extends CI_Controller {
     }
 
     function delete_jabatan($id) {
-        $delete = $this->M_jabatan->get_id_jabatan();
+        $delete = $this->M_jabatan->get_id_jabatan($id);
 
         if ($delete) {
             $this->M_jabatan->delete($id);
