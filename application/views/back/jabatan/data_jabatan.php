@@ -3,7 +3,7 @@
                         <h3 class="card-title"><b style="color: #0069D9">Data Jabatan</b></h3>
                     </div>
                     <div class="card-body">
-                        <?= $this->session->flashdata('message') ?>
+                        <?= $this->session->flashdata('hapus') ?>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
