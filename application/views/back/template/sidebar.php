@@ -442,7 +442,7 @@
             
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="<?= base_url('auth/logout') ?>" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Log Out
