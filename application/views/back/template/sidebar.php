@@ -376,8 +376,8 @@
             </ul>
           </li> -->
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Master Karyawan
                 <i class="fas fa-angle-left right"></i>
@@ -391,9 +391,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url() ?>assets/back/pages/examples/login.html" class="nav-link">
+                <a href="<?= base_url('divisi') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Departemen</p>
+                  <p>Data Divisi</p>
                 </a>
               </li>
               <li class="nav-item">
