@@ -7,7 +7,12 @@ class M_divisi extends CI_Model {
     }
 
     function insert($data) {
-        return $this->db->insert('jabatan', $data);
+        return $this->db->insert('divisi', $data);
+    }
+
+    function get_id_divisi($id) {
+        $this->db->where('id_divisi', $id);
+        return $this->db->get('divisi')->row();
     }
 }
 

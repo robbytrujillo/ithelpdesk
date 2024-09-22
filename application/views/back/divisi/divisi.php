@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <?php $this->load->view('back/jabatan/data_jabatan') ?>
+                <?php $this->load->view('back/divisi/data_divisi') ?>
             </div>
         </div>
     </section>

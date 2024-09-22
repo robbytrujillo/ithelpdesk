@@ -30,5 +30,20 @@ class Divisi extends CI_Controller {
         }
     }
 
+    function edit_divisi($id) {
+        $data['dvs'] = $this->M_divisi->get_id_divisi($id);
+
+        if ($data['dvs']) {
+            $data['divisi'] = $this->M_divisi->get_divisi();
+
+            $this->template->load('back/template', 'back/divisi/edit_divisi', $data);
+
+        } else {
+            $this->session->set_flashdata('message','<div class="alert alert-danger">Data Divisi Tidak ada!</div>');
+        
+            redirect('divisi','refresh');
+        }
+    }
+
 }
 ?>

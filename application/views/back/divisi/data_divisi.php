@@ -1,6 +1,6 @@
 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><b style="color: #0069D9">Data Jabatan</b></h3>
+                        <h3 class="card-title"><b style="color: #0069D9">Data Divisi</b></h3>
                     </div>
                     <div class="card-body">
                         <?= $this->session->flashdata('hapus') ?>
@@ -23,7 +23,7 @@
                                         <a href="<?= base_url('divisi/edit_divisi/'.$row->id_divisi) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
                                         </a> 
-                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('divisi/delete_jabatan/'.$row->id_jabatan) ?>" class="btn btn-danger btn-small">
+                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('divisi/delete_divisi/'.$row->id_divisi) ?>" class="btn btn-danger btn-small">
                                         <i class="fa fa-trash"></i>    
                                         </a>
                                     </td>
