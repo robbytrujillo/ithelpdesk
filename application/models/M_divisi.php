@@ -14,6 +14,11 @@ class M_divisi extends CI_Model {
         $this->db->where('id_divisi', $id);
         return $this->db->get('divisi')->row();
     }
+
+    function update($id, $data) {
+        $this->db->where('id_divisi', $id);
+        $this->db->update('divisi', $data);
+    }
 }
 
 
