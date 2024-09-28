@@ -9,7 +9,11 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>NIK</th>
                                     <th>Nama Karyawan</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Jabatan</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -19,7 +23,7 @@
                                 foreach($karyawan as $kry) { ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td><?= $kry->karyawan ?></td>
+                                    <td><?= $kry->username ?></td>
                                     <td>
                                         <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_jabatan) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
