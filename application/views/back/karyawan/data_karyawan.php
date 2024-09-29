@@ -1,4 +1,16 @@
-<div class="card">
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row mt-2">
+           
+            <div class="col-6">
+            <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Data Karyawan</b></h3>
                     </div>
@@ -10,10 +22,8 @@
                                 <tr>
                                     <th>No</th>
                                     <th>NIK</th>
-                                    <th>Nama Karyawan</th>
-                                    <th>Email</th>
+                                    <th>Username</th>
                                     <th>Status</th>
-                                    <th>Jabatan</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -25,7 +35,6 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $kry->nik ?></td>
                                     <td><?= $kry->username ?></td>
-                                    <td><?= $kry->email ?></td>
                                     <td><?= $kry->status_user ?></td>
                                     <td>
                                         <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_users) ?>" class="btn btn-warning btn-small">
@@ -41,3 +50,7 @@
                         </table>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+</div>
