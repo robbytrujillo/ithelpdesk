@@ -35,7 +35,15 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $kry->nik ?></td>
                                     <td><?= $kry->username ?></td>
-                                    <td><?= $kry->status_user ?></td>
+                                    <td>
+                                        <?php  
+                                            if ($kry->status_user == '1') {
+                                                echo 'Active';
+                                            }else {
+                                                echo 'Non Active';
+                                            } 
+                                        ?>
+                                    </td>
                                     <td>
                                         <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_users) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
