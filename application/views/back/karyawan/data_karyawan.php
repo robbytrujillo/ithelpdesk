@@ -28,10 +28,10 @@
                                     <td><?= $kry->email ?></td>
                                     <td><?= $kry->status_user ?></td>
                                     <td>
-                                        <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_user) ?>" class="btn btn-warning btn-small">
+                                        <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_users) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
                                         </a> 
-                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('karyawan/delete_karyawan/'.$kry->id_user) ?>" class="btn btn-danger btn-small">
+                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('karyawan/delete_karyawan/'.$kry->id_users) ?>" class="btn btn-danger btn-small">
                                         <i class="fa fa-trash"></i>    
                                         </a>
                                     </td>
