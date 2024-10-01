@@ -6,4 +6,8 @@ class M_karyawan extends CI_Model {
     function get_karyawan() {
         return $this->db->get('users')->result();
     }
+
+    function insert($data) {
+        $this->db->insert('users', $data);
+    }
 }

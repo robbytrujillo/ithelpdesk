@@ -16,7 +16,7 @@ class Karyawan extends CI_Controller {
     }
 
     function save_karyawan() {
-        $this->form_validation->set_rules('nik', 'NIK', 'trim|required');
+        $this->form_validation->set_rules('nik', 'NIK', 'trim|is_unique[users.nik]|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[users.email]|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
@@ -29,8 +29,11 @@ class Karyawan extends CI_Controller {
 
         if ($this->form_validation->run() == TRUE) {
             $data = array(
+                'nik'=> $this->input->post('nik'),
                 'username'=> $this->input->post('username'),
                 'email'=> $this->input->post('email'),
+                'jabatan_id'=> $this->input->post('jabatan_id'),
+                'divisi_id'=> $this->input->post('divisi_id'),
                 'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                 'status_user' => 1,
                 'level_user' => 1,
@@ -38,7 +41,7 @@ class Karyawan extends CI_Controller {
 
             // var_dump($data);
 
-            $this->M_auth->insert($data);
+            $this->M_karyawan->insert($data);
 
             $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
 
