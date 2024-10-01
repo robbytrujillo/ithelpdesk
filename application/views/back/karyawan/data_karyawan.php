@@ -9,10 +9,11 @@
     <section class="content">
         <div class="row mt-2">
            
-            <div class="col-6">
+            <div class="col-12">
             <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Data Karyawan</b></h3>
+                        <a href="<?= base_url('karyawan/add_karyawan') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <!-- <?= $this->session->flashdata('message') ?> -->

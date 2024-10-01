@@ -8,4 +8,9 @@ class Karyawan extends CI_Controller {
 
         $this->template->load('back/template', 'back/karyawan/data_karyawan', $data);
     }
+
+    function add_karyawan() {
+        $data['jabatan'] = $this->M_jabatan->get_jabatan();
+        $this->template->load('back/template', 'back/karyawan/form_karyawan', $data);
+    }
 }
