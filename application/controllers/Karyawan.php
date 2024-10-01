@@ -16,6 +16,7 @@ class Karyawan extends CI_Controller {
     }
 
     function save_karyawan() {
+        $this->form_validation->set_rules('nik', 'NIK', 'trim|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[users.email]|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
