@@ -11,6 +11,7 @@ class Karyawan extends CI_Controller {
 
     function add_karyawan() {
         $data['jabatan'] = $this->M_jabatan->get_jabatan();
+        $data['divisi'] = $this->M_divisi->get_divisi();
         $this->template->load('back/template', 'back/karyawan/form_karyawan', $data);
     }
 }

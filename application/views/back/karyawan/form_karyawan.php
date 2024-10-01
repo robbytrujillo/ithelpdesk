@@ -66,6 +66,14 @@
                                     <?php } ?>
                                 </select>
                             </div>
+                            <div class="input-group mb-3">
+                                <select name="divisi_id" class="form-control">
+                                    <option value="">--Pilih Divisi--</option>
+                                    <?php foreach ($divisi as $key => $row) {?>
+                                    <option value="<?= $row->id_divisi ?>"><?= $row->divisi ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary btn-sm"> Save </button>
                             <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
                         </form>
