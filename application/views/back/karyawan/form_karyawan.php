@@ -13,7 +13,7 @@
             <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Form Karyawan</b></h3>
-                        <a href="<?= base_url('karyawan/add_karyawan') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
+                        <a href="<?= base_url('karyawan') ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
                     </div>
                     <div class="card-body">
                         <?= validation_errors() ?>

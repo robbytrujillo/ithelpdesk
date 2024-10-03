@@ -16,7 +16,7 @@
                         <a href="<?= base_url('karyawan/add_karyawan') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
                     </div>
                     <div class="card-body">
-                        <!-- <?= $this->session->flashdata('message') ?> -->
+                        <?= $this->session->flashdata('message') ?> 
                         <?= $this->session->flashdata('hapus') ?>
                         <table class="table table-bordered">
                             <thead>
