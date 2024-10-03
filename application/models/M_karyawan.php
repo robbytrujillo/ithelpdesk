@@ -10,4 +10,9 @@ class M_karyawan extends CI_Model {
     function insert($data) {
         $this->db->insert('users', $data);
     }
+
+    function get_id_users($id) {
+        $this->db->where('id_users', $id);
+        return $this->db->get('users')->row();
+    }
 }

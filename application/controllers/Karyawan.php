@@ -52,15 +52,16 @@ class Karyawan extends CI_Controller {
     }
 
     function edit_karyawan($id) {
-        $data['kry'] = $this->M_divisi->get_id_divisi($id);
+        $data['users'] = $this->M_karyawan->get_id_users($id);
 
-        if ($data['kry']) {
-            $data['karyawan'] = $this->M_karyawan->get_karyawan();
+        if ($data['users']) {
+            $data['divisi'] = $this->M_divisi->get_divisi();
+            $data['jabatan'] = $this->M_jabatan->get_jabatan();
 
             $this->template->load('back/template', 'back/karyawan/edit_karyawan', $data);
 
         } else {
-            $this->session->set_flashdata('message','<div class="alert alert-danger">Data karyawan didak ada!</div>');
+            $this->session->set_flashdata('message','<div class="alert alert-danger">Data karyawan tidak ada!</div>');
         
             redirect('karyawan','refresh');
         }
