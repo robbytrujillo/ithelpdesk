@@ -19,7 +19,7 @@
                         <?= validation_errors() ?>
                         <form action="<?= base_url('karyawan/save_karyawan') ?>" method="POST">
                             <div class="input-group mb-3">
-                                <input type="text" name="nik" class="form-control" placeholder="NIK">
+                                <input type="text" name="nik" value="<?= $users->nik ?>" class="form-control" placeholder="NIK">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" name="username" class="form-control" placeholder="Username">
+                                <input type="text" name="username" value="<?= $users->username ?>" class="form-control" placeholder="Username">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" name="email" value="<?= set_value('email') ?>" class="form-control" placeholder="Email">
+                                <input type="text" name="email" value="<?= $users->email ?>" class="form-control" placeholder="Email">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
