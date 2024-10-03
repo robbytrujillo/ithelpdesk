@@ -12,7 +12,7 @@
             <div class="col-12">
             <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><b style="color: #0069D9">Form Karyawan</b></h3>
+                        <h3 class="card-title"><b style="color: #0069D9">Edit Karyawan </b><i><?= $users->username ?></i></h3>
                         <a href="<?= base_url('karyawan') ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
                     </div>
                     <div class="card-body">
