@@ -55,9 +55,10 @@ class Karyawan extends CI_Controller {
         $data['users'] = $this->M_karyawan->get_id_users($id);
 
         if ($data['users']) {
-            $data['divisi'] = $this->M_divisi->get_divisi();
             $data['jabatan'] = $this->M_jabatan->get_jabatan();
 
+            $data['divisi'] = $this->M_divisi->get_divisi();
+            
             $this->template->load('back/template', 'back/karyawan/edit_karyawan', $data);
 
         } else {
