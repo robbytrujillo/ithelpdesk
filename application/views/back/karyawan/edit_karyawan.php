@@ -19,6 +19,8 @@
                         <?= validation_errors() ?>
                         <form action="<?= base_url('karyawan/save_karyawan') ?>" method="POST">
                             <div class="input-group mb-3">
+                                <input type="hidden" name="id_users" value="<?= $users->id_users ?>" class="form-control" placeholder="NIK">
+
                                 <input type="text" name="nik" value="<?= $users->nik ?>" class="form-control" placeholder="NIK">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
