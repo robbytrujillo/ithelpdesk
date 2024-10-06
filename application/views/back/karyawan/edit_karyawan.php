@@ -19,7 +19,7 @@
                         <?= validation_errors() ?>
                         <form action="<?= base_url('karyawan/save_karyawan') ?>" method="POST">
                             <div class="input-group mb-3">
-                                <input type="hidden" name="id_users" value="<?= $users->id_users ?>" class="form-control" placeholder="NIK">
+                                <input type="hidden" name="id_users" value="<?= $users->id_users ?>" class="form-control">
 
                                 <input type="text" name="nik" value="<?= $users->nik ?>" class="form-control" placeholder="NIK">
                                 <div class="input-group-append">
@@ -78,6 +78,20 @@
                                         <?= $row->id_divisi == $users->divisi_id ? "selected" : null ?>>
                                         <?= $row->divisi ?></option>
                                     <?php } ?>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select name="status_user" class="form-control">
+                                    <option value="">--Status User--</option>
+                                    <option value="1"> Active </option>
+                                    <option value="0"> Non Active </option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select name="level_user" class="form-control">
+                                    <option value="">--Level User--</option>
+                                    <option value="2"> IT </option>
+                                    <option value="1"> Staf </option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm"> Save </button>
