@@ -15,4 +15,9 @@ class M_karyawan extends CI_Model {
         $this->db->where('id_users', $id);
         return $this->db->get('users')->row();
     }
+
+    function update($id, $data) {
+        $this->db->where('id_jabatan', $id);
+        $this->db->update('jabatan', $data);
+    }
 }

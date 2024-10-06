@@ -69,12 +69,8 @@ class Karyawan extends CI_Controller {
     }
 
     function update_karyawan() {
-        $this->form_validation->set_rules('nik', 'NIK', 'trim|is_unique[users.nik]|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[users.email]|required');
-        $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
-        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|matches[password]|required');
-
+       
         $this->form_validation->set_message('required','{field} Harus diisi');
         $this->form_validation->set_message('valid_email','{field} anda harus valid');
 
@@ -94,7 +90,7 @@ class Karyawan extends CI_Controller {
 
             // var_dump($data);
 
-            $this->M_karyawan->insert($data);
+            $this->M_karyawan->update($data);
 
             $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
 
