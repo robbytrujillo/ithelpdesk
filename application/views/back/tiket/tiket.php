@@ -48,11 +48,14 @@
                                         ?>
                                     </td>
                                     <td>
+                                        <a href="<?= base_url('tiket/detail_tiket/'.$tkt->id_tiket) ?>" class="btn btn-secondary btn-small">
+                                            <i class="fa fa-eye"></i>    
+                                        </a> 
                                         <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
-                                        <i class="fa fa-edit"></i>    
+                                            <i class="fa fa-edit"></i>    
                                         </a> 
                                         <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('tiket/delete_tiket/'.$tkt->id_tiket) ?>" class="btn btn-danger btn-small">
-                                        <i class="fa fa-trash"></i>    
+                                            <i class="fa fa-trash"></i>    
                                         </a>
                                     </td>
                                 </tr>
