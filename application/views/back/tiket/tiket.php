@@ -48,7 +48,7 @@
                                         ?>
                                     </td>
                                     <td>
-                                        <a href="<?= base_url('tiket/detail_tiket/'.$tkt->id_tiket) ?>" class="btn btn-secondary btn-small">
+                                        <a href="<?= base_url('tiket/detail_tiket/'.$tkt->no_tiket) ?>" class="btn btn-secondary btn-small">
                                             <i class="fa fa-eye"></i>    
                                         </a> 
                                         <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
