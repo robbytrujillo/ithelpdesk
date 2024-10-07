@@ -83,15 +83,15 @@
                             <div class="input-group mb-3">
                                 <select name="status_user" class="form-control">
                                     <option value="">--Status User--</option>
-                                    <option value="1"> Active </option>
-                                    <option value="0"> Non Active </option>
+                                    <option value="1" <?= $users->status_user == '1' ? 'selected' : '' ?> > Active </option>
+                                    <option value="0" <?= $users->status_user == '0' ? 'selected' : '' ?> > Non Active </option>
                                 </select>
                             </div>
                             <div class="input-group mb-3">
                                 <select name="level_user" class="form-control">
                                     <option value="">--Level User--</option>
-                                    <option value="1"> Staf </option>
-                                    <option value="2"> IT </option>
+                                    <option value="1" <?= $users->level_user == '1' ? 'selected' : '' ?>> Staf </option>
+                                    <option value="2" <?= $users->level_user == '2' ? 'selected' : '' ?>> IT </option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm"> Save </button>
