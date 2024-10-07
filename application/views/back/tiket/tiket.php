@@ -24,7 +24,7 @@
                                     <th>No</th>
                                     <th>No Tiket</th>
                                     <th>Judul Tiket</th>
-                                    
+                                    <th>Status Tiket</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -36,6 +36,17 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $tkt->no_tiket ?></td>
                                     <td><?= $tkt->judul_tiket ?></td>
+                                    <td><?php if($tkt->status_tiket == '0') {
+                                            echo '<span class="badge badge-warning"> Waiting....</span>';
+                                        } else if ($tkt->status_tiket == '1') {
+                                            echo '<span class="badge badge-info"> Response...</span>';
+                                        } else if ($tkt->status_tiket == '2') {
+                                            echo '<span class="badge badge-success"> Process...</span>';
+                                        } else {
+                                            echo '<span class="badge badge-danger"> Solved</span>';
+                                        }
+                                        ?>
+                                    </td>
                                     <td>
                                         <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
