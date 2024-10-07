@@ -92,7 +92,7 @@ class Karyawan extends CI_Controller {
 
             $this->M_karyawan->update($this->input->post('id_users'), $data);
 
-            $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Simpan</div>');
+            $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Ubah</div>');
 
             redirect('karyawan','refresh');
         } else {
