@@ -13,7 +13,7 @@
             <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Data Tiket</b></h3>
-                        <a href="<?= base_url('karyawan/add_karyawan') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
+                        <a href="<?= base_url('tiket/add_tiket') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <?= $this->session->flashdata('message') ?> 
@@ -22,40 +22,31 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>NIK</th>
-                                    <th>Username</th>
-                                    <th>Status</th>
+                                    <th>No Tiket</th>
+                                    <th>Judul Tiket</th>
+                                    
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <!-- <tbody>
+                            
                             <?php 
                                 $no = 1;
-                                foreach($karyawan as $kry) { ?>
+                                foreach($tiket as $tkt) { ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td><?= $kry->nik ?></td>
-                                    <td><?= $kry->username ?></td>
+                                    <td><?= $tkt->no_tiket ?></td>
+                                    <td><?= $tkt->judul_tiket ?></td>
                                     <td>
-                                        <?php  
-                                            if ($kry->status_user == '1') {
-                                                echo 'Active';
-                                            }else {
-                                                echo 'Non Active';
-                                            } 
-                                        ?>
-                                    </td>
-                                    <td>
-                                        <a href="<?= base_url('karyawan/edit_karyawan/'.$kry->id_users) ?>" class="btn btn-warning btn-small">
+                                        <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
                                         <i class="fa fa-edit"></i>    
                                         </a> 
-                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('karyawan/delete_karyawan/'.$kry->id_users) ?>" class="btn btn-danger btn-small">
+                                        <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('tiket/delete_tiket/'.$tkt->id_tiket) ?>" class="btn btn-danger btn-small">
                                         <i class="fa fa-trash"></i>    
                                         </a>
                                     </td>
                                 </tr>
                                 <?php } ?>
-                            </tbody> -->
+                            </tbody> 
                         </table>
                     </div>
                 </div>
