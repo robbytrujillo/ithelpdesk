@@ -99,4 +99,18 @@ class Karyawan extends CI_Controller {
             $this->add_karyawan();
         }
     }
+
+    function delete_karyawan($id) {
+        $delete = $this->M_karyawan->get_id_users($id);
+
+        if ($delete) {
+            $this->M_karyawan->delete($id);
+
+            $this->session->set_flashdata('hapus','<div class="alert alert-danger">Data berhasil dihapus!</div>');
+            redirect('karyawan','refresh');
+        } else {
+            $this->session->set_flashdata('hapus','<div class="alert alert-danger">Data tidak ditemukan!</div>');
+            redirect('karyawan','refresh');
+        }
+    }
 }

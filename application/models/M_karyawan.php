@@ -20,4 +20,9 @@ class M_karyawan extends CI_Model {
         $this->db->where('id_users', $id);
         $this->db->update('users', $data);
     }
+
+    function delete($id) {
+        $this->db->where('id_users', $id);
+        $this->db->delete('users');
+    }
 }
