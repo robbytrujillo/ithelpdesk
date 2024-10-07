@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-body">
                         <?= validation_errors() ?>
-                        <form action="<?= base_url('karyawan/save_karyawan') ?>" method="POST">
+                        <form action="<?= base_url('karyawan/update_karyawan') ?>" method="POST">
                             <div class="input-group mb-3">
                                 <input type="hidden" name="id_users" value="<?= $users->id_users ?>" class="form-control">
 
@@ -90,8 +90,8 @@
                             <div class="input-group mb-3">
                                 <select name="level_user" class="form-control">
                                     <option value="">--Level User--</option>
-                                    <option value="2"> IT </option>
                                     <option value="1"> Staf </option>
+                                    <option value="2"> IT </option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm"> Save </button>

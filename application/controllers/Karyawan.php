@@ -84,8 +84,8 @@ class Karyawan extends CI_Controller {
                 'jabatan_id'=> $this->input->post('jabatan_id'),
                 'divisi_id'=> $this->input->post('divisi_id'),
                 'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
-                'status_user' => 1,
-                'level_user' => 1,
+                'status_user' => $this->input->post('status_user'),
+                'level_user' => $this->input->post('level_user'),
             );
 
             // var_dump($data);
