@@ -12,6 +12,7 @@ class M_auth extends CI_Model {
         $this->db->where('email', $id);
         return $this->db->get('users')->row();
     }
+
 }
 
 ?>

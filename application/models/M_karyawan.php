@@ -25,4 +25,17 @@ class M_karyawan extends CI_Model {
         $this->db->where('id_users', $id);
         $this->db->delete('users');
     }
+
+    // public function getPasswordByEmail($email) {
+    //     $this->db->select('password');
+    //     $this->db->from('users');
+    //     $this->db->where('email', $email);
+    //     $query = $this->db->get();
+
+    //     if ($query->num_rows() == 1) {
+    //         return $query->row()->password; // Mengembalikan hash password
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }
