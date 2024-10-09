@@ -40,7 +40,7 @@
                                     <div class="col-12">
                                     <h4>
                                         <i class="fas fa-ticket-alt"> </i> IT Helpdesk.
-                                        <small class="float-right">Date: 2/10/2014</small>
+                                        <small class="float-right">Date: <?= $tiket->tgl_daftar; ?></small>
                                     </h4>
                                     </div>
                                     <!-- /.col -->
