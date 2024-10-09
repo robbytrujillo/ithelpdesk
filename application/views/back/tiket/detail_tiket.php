@@ -51,22 +51,37 @@
                                     From
                                     <address>
                                         <strong style="color: orangered"><?= $tiket->username; ?></strong><br>
-                                        Divisi:<?= $tiket->divisi; ?><br>
-                                        Jabatan:<?= $tiket->jabatan; ?><br>
-                                        Phone: (804) 123-5432<br>
+                                        Divisi: <?= $tiket->divisi; ?><br>
+                                        Jabatan: <?= $tiket->jabatan; ?><br>
                                         Email: <?= $tiket->email; ?>
                                     </address>
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-sm-4 invoice-col">
-                                    To
-                                    <address>
-                                        <strong>John Doe</strong><br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        Phone: (555) 539-1037<br>
-                                        Email: john.doe@example.com
-                                    </address>
+                                        <b>Status Tiket</b>:
+                                        <?php if($tiket->status_tiket == '0') {
+                                            echo '<span class="badge badge-warning"> Waiting....</span>';
+                                        } else if ($tiket->status_tiket == '1') {
+                                            echo '<span class="badge badge-info"> Response...</span>';
+                                        } else if ($tiket->status_tiket == '2') {
+                                            echo '<span class="badge badge-success"> Process...</span>';
+                                        } else {
+                                            echo '<span class="badge badge-danger"> Solved</span>';
+                                        }
+                                        ?>
+                                        <br>
+                                        <br>
+                                        <b>No Tiket: </b><span style="color: #007BFF"><?= $tiket->no_tiket; ?></span>
+                                        <br>
+                                        <br>
+                                        <b>Selesai: </b> 
+                                        <?php 
+                                            if ($tiket->status_tiket == '3') {
+                                                echo $tiket->waktu_tanggapan;
+                                            } else {
+                                                echo 'Belum Selesai';
+                                            }
+                                        ?>
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-sm-4 invoice-col">
