@@ -97,8 +97,9 @@
 
                                 <!-- Table row -->
                                 <div class="row">
-                                    <div class="col-12 table-responsive">
-                                    <table class="table table-striped">
+                                    <div class="col-6 table-responsive">
+                                        <label for="">Keluhan</label>
+                                    <!-- <table class="table table-striped">
                                         <thead>
                                         <tr>
                                         <th>Qty</th>
@@ -138,7 +139,10 @@
                                         <td>$25.99</td>
                                         </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
+                                    </div>
+                                    <div class="col-6 table-responsive">
+                                    
                                     </div>
                                     <!-- /.col -->
                                 </div>
