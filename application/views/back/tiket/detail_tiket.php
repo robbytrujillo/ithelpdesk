@@ -101,7 +101,7 @@
                                         <label for="">Keluhan</label>
                                         <input type="text" value="<?= $tiket->judul_tiket; ?>" readonly class="form-control">
                                         <label for="">Deskripsi</label>
-                                        <textarea rows="6" readonly class="form-control"><?= $tiket->deskripsi; ?></textarea>
+                                        <textarea rows="7" readonly class="form-control"><?= $tiket->deskripsi; ?></textarea>
                                     <!-- <table class="table table-striped">
                                         <thead>
                                         <tr>
@@ -145,7 +145,8 @@
                                     </table> -->
                                     </div>
                                     <div class="col-6 table-responsive">
-                                    
+                                        <label for="">Tanggapan Biro IT</label>
+                                        <textarea rows="10" readonly class="form-control"></textarea>
                                     </div>
                                     <!-- /.col -->
                                 </div>
@@ -154,42 +155,12 @@
                                 <div class="row">
                                     <!-- accepted payments column -->
                                     <div class="col-6">
-                                    <p class="lead">Payment Methods:</p>
-                                    <img src="../../dist/img/credit/visa.png" alt="Visa">
-                                    <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
-                                    <img src="../../dist/img/credit/american-express.png" alt="American Express">
-                                    <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
-
-                                    <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
-                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem
-                                        plugg
-                                        dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
-                                    </p>
+                                        <p class="lead">Foto Keluhan:</p>
+                                        <img src="<?= base_url('assets/image/tiket/'.$tiket->gambar_tiket); ?>" width="250px" alt="Visa">
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-6">
-                                    <p class="lead">Amount Due 2/22/2014</p>
-
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                        <tr>
-                                            <th style="width:50%">Subtotal:</th>
-                                            <td>$250.30</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Tax (9.3%)</th>
-                                            <td>$10.34</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Shipping:</th>
-                                            <td>$5.80</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Total:</th>
-                                            <td>$265.24</td>
-                                        </tr>
-                                        </table>
-                                    </div>
+                                        <p class="lead">Foto Tanggapan</p>
                                     </div>
                                     <!-- /.col -->
                                 </div>
