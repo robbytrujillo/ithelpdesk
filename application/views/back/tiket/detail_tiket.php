@@ -156,11 +156,12 @@
                                     <!-- accepted payments column -->
                                     <div class="col-6">
                                         <p class="lead">Foto Keluhan:</p>
-                                        <img src="<?= base_url('assets/image/tiket/'.$tiket->gambar_tiket); ?>" width="250px" alt="Visa">
+                                        <img src="<?= base_url('assets/image/tiket/'.$tiket->gambar_tiket); ?>" width="250px">
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-6">
                                         <p class="lead">Foto Tanggapan</p>
+                                        <img src="<?= base_url('assets/image/tiket/'.$tiket->gambar_tiket); ?>" width="250px">
                                     </div>
                                     <!-- /.col -->
                                 </div>
