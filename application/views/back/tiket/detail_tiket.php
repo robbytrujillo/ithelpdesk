@@ -145,7 +145,7 @@
                                     </table> -->
                                     </div>
                                     <div class="col-6 table-responsive">
-                                        <label for="">Tanggapan Biro IT</label>
+                                        <label for="">Tanggapan dari IT</label>
                                         <textarea rows="10" readonly class="form-control"></textarea>
                                     </div>
                                     <!-- /.col -->
@@ -168,11 +168,12 @@
                                 <!-- /.row -->
 
                                 <!-- this row will not appear when printing -->
+                                <br>
                                 <div class="row no-print">
                                     <div class="col-12">
                                     <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
                                     <button type="button" class="btn btn-success float-right"><i class="far fa-credit-card"></i> Submit
-                                        Payment
+                                        
                                     </button>
                                     <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
                                         <i class="fas fa-download"></i> Generate PDF
