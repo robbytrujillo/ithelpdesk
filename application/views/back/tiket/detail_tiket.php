@@ -99,6 +99,9 @@
                                 <div class="row">
                                     <div class="col-6 table-responsive">
                                         <label for="">Keluhan</label>
+                                        <input type="text" value="<?= $tiket->judul_tiket; ?>" readonly class="form-control">
+                                        <label for="">Deskripsi</label>
+                                        <textarea rows="6" readonly class="form-control"><?= $tiket->deskripsi; ?></textarea>
                                     <!-- <table class="table table-striped">
                                         <thead>
                                         <tr>
