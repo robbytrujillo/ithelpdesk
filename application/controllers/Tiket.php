@@ -9,6 +9,11 @@ class Tiket extends CI_Controller {
         $this->template->load('back/template','back/tiket/tiket', $data);
     }
 
+    function add_tiket() {
+        $data['tiket'] = $this->M_tiket->get_tiket();
+        // $data['divisi'] = $this->M_divisi->get_divisi();
+        $this->template->load('back/template', 'back/tiket/form_tiket', $data);
+    }
     function detail_tiket($no_tiket) {
         $data['tiket'] = $this->M_tiket->get_no_tiket($no_tiket);
         

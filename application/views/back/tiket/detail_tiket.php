@@ -43,9 +43,9 @@
                                         <small class="float-right">Date: <?= $tiket->tgl_daftar; ?></small>
                                     </h4>
                                     </div>
-                                    <!-- /.col -->
+                                    
                                 </div>
-                                <!-- info row -->
+                                
                                 <div class="row invoice-info">
                                     <div class="col-sm-4 invoice-col">
                                     From
@@ -56,7 +56,7 @@
                                         Email: <?= $tiket->email; ?>
                                     </address>
                                     </div>
-                                    <!-- /.col -->
+                                 
                                     <div class="col-sm-4 invoice-col">
                                         <b>Status Tiket</b>:
                                         <?php if($tiket->status_tiket == '0') {
@@ -84,13 +84,6 @@
                                         ?>
                                     </div>
                                     <!-- /.col -->
-                                    <div class="col-sm-4 invoice-col">
-                                    <b>Invoice #007612</b><br>
-                                    <br>
-                                    <b>Order ID:</b> 4F3S8J<br>
-                                    <b>Payment Due:</b> 2/22/2014<br>
-                                    <b>Account:</b> 968-34567
-                                    </div>
                                     <!-- /.col -->
                                 </div>
                                 <!-- /.row -->
@@ -165,21 +158,9 @@
                                     </div>
                                     <!-- /.col -->
                                 </div>
-                                <!-- /.row -->
-
-                                <!-- this row will not appear when printing -->
+                                
                                 <br>
-                                <div class="row no-print">
-                                    <div class="col-12">
-                                    <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
-                                    <button type="button" class="btn btn-success float-right"><i class="far fa-credit-card"></i> Submit
-                                        
-                                    </button>
-                                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                        <i class="fas fa-download"></i> Generate PDF
-                                    </button>
-                                    </div>
-                                </div>
+                                
                                 </div>
                                 <!-- /.invoice -->
                             </div><!-- /.col -->

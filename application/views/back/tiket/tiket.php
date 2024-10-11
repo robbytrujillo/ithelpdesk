@@ -13,7 +13,7 @@
             <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"><b style="color: #0069D9">Data Tiket</b></h3>
-                        <a href="<?= base_url('tiket/add_tiket') ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
+                        <a href="<?= base_url('tiket/add_tiket') ?>" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#form_tiket">Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <?= $this->session->flashdata('message') ?> 
@@ -67,4 +67,38 @@
             </div>
         </div>
     </section>
+</div>
+
+<div class="modal fade" id="form_tiket">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Form Tambah Tiket</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    &times;
+                </span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form action="<?= base_url('tiket/save_tiket') ?>" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Keluhan</label>
+                    <input type="text" name="judul_tiket" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Keterangan</label>
+                    <textarea name="deskripsi" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Gambar</label>
+                    <input type="file" name="gambar_tiket" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-sm"> Save </button>
+                <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
+            </form>
+        </div>
+    </div>
+</div>
 </div>
