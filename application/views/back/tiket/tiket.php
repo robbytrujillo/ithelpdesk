@@ -69,6 +69,7 @@
     </section>
 </div>
 
+<!-- Menampilkan Modal -->
 <div class="modal fade" id="form_tiket">
 <div class="modal-dialog">
     <div class="modal-content">
