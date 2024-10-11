@@ -85,6 +85,7 @@
             <form action="<?= base_url('tiket/save_tiket') ?>" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Keluhan</label>
+                    <input type="text" name="no_tiket" value="<?= $no_tiket; ?>" class="form-control">
                     <input type="text" name="judul_tiket" class="form-control">
                 </div>
                 <div class="form-group">
