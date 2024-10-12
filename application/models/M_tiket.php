@@ -23,12 +23,16 @@ class M_tiket extends CI_Model {
             if ($q->num_rows() > 0) {
                 foreach ($q->result() as $k) {
                     $tmp = ((int) $k->no_tiket) + 1;
-                    $kd = sprintf("$%04s", $tmp);
+                    $kd = sprintf("%04s", $tmp);
                 } 
                 } else {
                     $kd = "0001";
             }
             date_default_timezone_set("Asia/Jakarta");
             return date('dmy') .$kd;
+    }
+
+    function insert($data) {
+        return $this->db->insert('tiket', $data);
     }
 }
