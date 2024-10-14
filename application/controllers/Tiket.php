@@ -86,4 +86,17 @@ class Tiket extends CI_Controller {
             $this->template->load('back/template', 'back/tiket/detail_tiket', $data);
         }
     }
+
+    function delete_tiket($id) {
+        $delete = $this->M_tiket->get_id_tiket($id);
+
+        if ($delete) {
+            $this->M_tiket->delete($id);
+            $this->session->set_flashdata('message','<div class="alert alert-info">Data berhasil dihapus</div>');
+            redirect('tiket','refresh');
+        } else {
+            $this->session->set_flashdata('message','<div class="alert alert-danger">Data tidak ada!</div>');
+            redirect('tiket','refresh');
+        }
+    }   
 }

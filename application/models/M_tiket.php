@@ -7,6 +7,11 @@ class M_tiket extends CI_Model {
         return $this->db->get('tiket')->result();
     }
 
+    function get_id_tiket($id) {
+        $this->db->where('id_tiket', $id);
+        return $this->db->get('tiket')->row();
+    }
+
     function get_no_tiket($no_tiket) {
         $this->db->join('users', 'tiket.user_id = users.id_users', 'left');
         $this->db->join('divisi', 'users.divisi_id = divisi.id_divisi', 'left');
@@ -37,5 +42,10 @@ class M_tiket extends CI_Model {
         //     log_message('error', 'user_id is NULL in insert query');
         // }
         return $this->db->insert('tiket', $data);
+    }
+
+    function delete($id) {
+        $this->db->where('id_tiket', $id);
+        $this->db->delete('tiket');
     }
 }
