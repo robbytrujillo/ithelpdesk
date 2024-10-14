@@ -8,7 +8,6 @@ class M_tiket extends CI_Model {
     }
 
     function get_no_tiket($no_tiket) {
-        // $this->db->where('id_users', $no_tiket);
         $this->db->join('users', 'tiket.user_id = users.id_users', 'left');
         $this->db->join('divisi', 'users.divisi_id = divisi.id_divisi', 'left');
         $this->db->join('jabatan', 'users.jabatan_id = jabatan.id_jabatan', 'left');
@@ -33,6 +32,10 @@ class M_tiket extends CI_Model {
     }
 
     function insert($data) {
+         // Debug untuk memeriksa apakah user_id null atau tidak
+        // if (is_null($data['user_id'])) {
+        //     log_message('error', 'user_id is NULL in insert query');
+        // }
         return $this->db->insert('tiket', $data);
     }
 }
