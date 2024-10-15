@@ -25,6 +25,7 @@
                                     <th>No Tiket</th>
                                     <th>Judul Tiket</th>
                                     <th>Status Tiket</th>
+                                    <th>Konfirmasi</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -48,12 +49,24 @@
                                         ?>
                                     </td>
                                     <td>
+                                        <?php 
+                                            if ($tkt->status_tiket == '0') {
+                                                echo '<a href="javascript:void();" data-toggle="modal" data-target="#modal-target" id="select-tiket" 
+                                                data-id_tiket     = "'.$tkt->id_tiket. '"
+                                                data-status_tiket = "'.$tkt->status_tiket. '"
+                                                class="btn btn-success">
+                                                Confirm
+                                                </a>';
+                                            }
+                                        ?>
+                                    </td>
+                                    <td>
                                         <a href="<?= base_url('tiket/detail_tiket/'.$tkt->no_tiket) ?>" class="btn btn-secondary btn-small">
                                             <i class="fa fa-eye"></i>    
                                         </a> 
-                                        <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
+                                        <!-- <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
                                             <i class="fa fa-edit"></i>    
-                                        </a> 
+                                        </a>  -->
                                         <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('tiket/delete_tiket/'.$tkt->id_tiket) ?>" class="btn btn-danger btn-small">
                                             <i class="fa fa-trash"></i>    
                                         </a>
@@ -104,3 +117,38 @@
     </div>
 </div>
 </div>
+
+<div class="modal fade" id="modal-tiket">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Yakin confirm tiket ini?</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    &times;
+                </span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form action="<?= base_url('tiket/save_tiket_waiting') ?>" method="POST" enctype="multipart/form-data">
+                    <input type="t" name="id_tiket" id="id_tiket" class="form-control">
+                    <input type="text" name="status_tiket" id="status_tiket" class="form-control">
+                <button type="submit" class="btn btn-primary btn-sm"> Save </button>
+                <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    $(documemt) .ready(function() {
+        $(document) .on('click','#select_tiket', function() {
+            var id_tiket     = $(this) .data('id_tiket');
+            var status_tiket = $(this) .data('status_tiket');
+
+            $('#id_tiket').val(id_tiket)
+            $('#status_tiket').val(status_tiket)
+        })
+    })
+</script>
