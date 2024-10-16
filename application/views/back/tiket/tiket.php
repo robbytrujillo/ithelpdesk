@@ -129,8 +129,8 @@
         </div>
         <div class="modal-body">
             <form action="<?= base_url('tiket/save_tiket_waiting') ?>" method="POST" enctype="multipart/form-data">
-                    <input type="text" name="id_tiket" id="id_tiket" class="form-control">
-                    <input type="text" name="status_tiket" id="status_tiket" class="form-control">
+                    <input type="hidden" name="id_tiket" id="id_tiket" class="form-control">
+                    <input type="hidden" name="status_tiket" value="1" class="form-control">
                 <button type="submit" class="btn btn-primary btn-sm"> Save </button>
                 <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
             </form>

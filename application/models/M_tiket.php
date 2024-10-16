@@ -37,11 +37,12 @@ class M_tiket extends CI_Model {
     }
 
     function insert($data) {
-         // Debug untuk memeriksa apakah user_id null atau tidak
-        // if (is_null($data['user_id'])) {
-        //     log_message('error', 'user_id is NULL in insert query');
-        // }
         return $this->db->insert('tiket', $data);
+    }
+
+    function update($id, $data) {
+        $this->db->where('id_tiket', $id);
+        $this->db->update('tiket', $data);
     }
 
     function delete($id) {
