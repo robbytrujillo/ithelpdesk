@@ -37,7 +37,8 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $tkt->no_tiket ?></td>
                                     <td><?= $tkt->judul_tiket ?></td>
-                                    <td><?php if($tkt->status_tiket == '0') {
+                                    <td><?php 
+                                        if ($tkt->status_tiket == '0') {
                                             echo '<span class="badge badge-warning"> Waiting....</span>';
                                         } else if ($tkt->status_tiket == '1') {
                                             echo '<span class="badge badge-info"> Response...</span>';
@@ -51,11 +52,11 @@
                                     <td>
                                         <?php 
                                             if ($tkt->status_tiket == '0') {
-                                                echo '<a href="javascript:void();" data-toggle="modal" data-target="#modal-target" id="select-tiket" 
-                                                data-id_tiket     = "'.$tkt->id_tiket. '"
-                                                data-status_tiket = "'.$tkt->status_tiket. '"
+                                                echo '<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-tiket" id="select_tiket" 
+                                                data-id_tiket     = "' . $tkt->id_tiket . '"
+                                                data-status_tiket = "' . $tkt->status_tiket . '"
                                                 class="btn btn-success">
-                                                Confirm
+                                                    Confirm
                                                 </a>';
                                             }
                                         ?>
@@ -64,9 +65,6 @@
                                         <a href="<?= base_url('tiket/detail_tiket/'.$tkt->no_tiket) ?>" class="btn btn-secondary btn-small">
                                             <i class="fa fa-eye"></i>    
                                         </a> 
-                                        <!-- <a href="<?= base_url('tiket/edit_tiket/'.$tkt->id_tiket) ?>" class="btn btn-warning btn-small">
-                                            <i class="fa fa-edit"></i>    
-                                        </a>  -->
                                         <a onclick="return confirm('Yakin Akan Dihapus?');" href="<?= base_url('tiket/delete_tiket/'.$tkt->id_tiket) ?>" class="btn btn-danger btn-small">
                                             <i class="fa fa-trash"></i>    
                                         </a>
@@ -131,7 +129,7 @@
         </div>
         <div class="modal-body">
             <form action="<?= base_url('tiket/save_tiket_waiting') ?>" method="POST" enctype="multipart/form-data">
-                    <input type="t" name="id_tiket" id="id_tiket" class="form-control">
+                    <input type="text" name="id_tiket" id="id_tiket" class="form-control">
                     <input type="text" name="status_tiket" id="status_tiket" class="form-control">
                 <button type="submit" class="btn btn-primary btn-sm"> Save </button>
                 <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
@@ -142,10 +140,10 @@
 </div>
 
 <script>
-    $(documemt) .ready(function() {
-        $(document) .on('click','#select_tiket', function() {
-            var id_tiket     = $(this) .data('id_tiket');
-            var status_tiket = $(this) .data('status_tiket');
+    $(documemt).ready(function() {
+        $(document).on('click','#select_tiket', function() {
+            var id_tiket     = $(this).data('id_tiket');
+            var status_tiket = $(this).data('status_tiket');
 
             $('#id_tiket').val(id_tiket)
             $('#status_tiket').val(status_tiket)
