@@ -140,10 +140,10 @@
 </div>
 
 <script>
-    $(documemt).ready(function() {
+    $(document).ready(function() {
         $(document).on('click','#select_tiket', function() {
-            var id_tiket     = $(this).data('id_tiket');
-            var status_tiket = $(this).data('status_tiket');
+            var id_tiket     = $(this).data('id_tiket')
+            var status_tiket = $(this).data('status_tiket')
 
             $('#id_tiket').val(id_tiket)
             $('#status_tiket').val(status_tiket)
