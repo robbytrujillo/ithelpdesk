@@ -159,14 +159,26 @@
         </div>
         <div class="modal-body">
             <form action="<?= base_url('tiket/save_tiket_reply') ?>" method="POST" enctype="multipart/form-data">
-                    <!-- <input type="hidden" name="id_tiket" id="id_tiket" class="form-control">
-                    <input type="hidden" name="status_tiket" value="1" class="form-control"> -->
+                    <input type="hidden" name="id_tiket_id" id="id_tiket_id" class="form-control">
+                    <input type="hidden" name="tiket_id" id="tiket_id" class="form-control">
                 
                     <div class="form-group">
                         <label for="keluhan">Keluhan / Judul Tiket</label>
                         <input type="text" id="judul_tiket" class="form-control" readonly>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm"> Save </button>
+                    <div class="form-group">
+                        <label for="keluhan">Deskripsi</label>
+                        <textarea id="deskripsi" class="form-control" readonly></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="keluhan">Tanggapan</label>
+                        <textarea name="tanggapan" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gambar_tanggapan">Gambar Tanggapan</label>
+                        <input type="file" name="gambar_tanggapan" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm"> Reply Message </button>
                 <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
             </form>
         </div>
