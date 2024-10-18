@@ -60,7 +60,9 @@
                                                 </a>';
                                             } else if ($tkt->status_tiket == '1') {
                                                 echo '<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-reply" id="reply_message" 
-                                                
+                                                data-tiket_id     = "' . $tkt->id_tiket . '"
+                                                data-id_tiket_id = "' . $tkt->id_tiket . '"
+                                                data-judul_tiket = "' . $tkt->id_tiket . '"
                                                 class="btn btn-warning">
                                                     Reply Message
                                                 </a>';
