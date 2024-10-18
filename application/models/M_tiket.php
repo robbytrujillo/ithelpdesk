@@ -39,6 +39,10 @@ class M_tiket extends CI_Model {
     function insert($data) {
         return $this->db->insert('tiket', $data);
     }
+    
+    function insert_tanggapan($data) {
+        return $this->db->insert('detail_tiket', $data);
+    }
 
     function update($id, $data) {
         $this->db->where('id_tiket', $id);

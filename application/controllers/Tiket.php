@@ -98,6 +98,58 @@ class Tiket extends CI_Controller {
         }
     }
 
+    function save_tanggapan() {
+        $this->form_validation->set_rules('tanggapan', 'Tanggapan Tiket', 'trim|required');
+
+        $this->form_validation->set_message('required','{field} Harus diisi');
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->index();
+        } else {
+            if ($_FILES['gambar_tanggapan']['error'] <> 4) {
+                $config['upload_path'] = './assets/images/tanggapan/';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $config['max_size'] = '2048';
+                $nama_file = $this->input->post('tiket_id') . date('YmdHis');
+                $config['file_name'] = $nama_file;
+                // $config['max_width'] = '1024'; 
+                // $config['max_height'] = '768';
+
+                $this->load->library('upload', $config);
+
+                if (!$this->upload->do_upload('gambar_tanggapan')) {
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">'. $error['error'] . '</div>');
+                    $this->index();
+                } else {
+                    $gambar_tanggapan = $this->upload->data();
+
+                    $data = array(
+                        'tiket_id'          => $this->input->post('tiket_id'),
+                        'tanggapan'         => $this->input->post('tanggapan'),
+                        'gambar_tanggapan'  => $this->upload->data('file_name'),
+                        'waktu_tanggapan'   => date('Y-m-d'),
+                    );
+
+                    $this->M_tiket->insert_tanggapan($data);
+                    $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil di Simpan</div>');
+                    redirect('tiket','refresh');
+                }
+            } else {
+                $data = array(
+                    'tiket_id'          => $this->input->post('tiket_id'),
+                    'tanggapan'         => $this->input->post('tanggapan'),
+                    'waktu_tanggapan'   => date('Y-m-d'),
+                );
+
+                $this->M_tiket->insert_tanggapan($data);
+                $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil di Simpan</div>');
+                redirect('tiket','refresh');
+            } 
+        }
+    }
+
     function detail_tiket($no_tiket) {
         $data['tiket'] = $this->M_tiket->get_no_tiket($no_tiket);
         
