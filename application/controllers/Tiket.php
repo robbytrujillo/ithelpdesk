@@ -126,7 +126,7 @@ class Tiket extends CI_Controller {
                     $gambar_tanggapan = $this->upload->data();
 
                     $data = array(
-                        'tiket_id'          => $this->input->post('tiket_id'),
+                        'tiket_id'          => $this->input->post('id_tiket'),
                         'tanggapan'         => $this->input->post('tanggapan'),
                         'gambar_tanggapan'  => $this->upload->data('file_name'),
                         'waktu_tanggapan'   => date('Y-m-d'),

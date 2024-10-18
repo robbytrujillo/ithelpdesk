@@ -162,7 +162,7 @@
         </div>
         <div class="modal-body">
             <form action="<?= base_url('tiket/save_tanggapan') ?>" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id_tiket_id" id="id_tiket_id" class="form-control">
+                    <input type="hidden" name="id_tiket" id="id_tiket_id" class="form-control">
                     <input type="hidden" name="tiket_id" id="tiket_id" class="form-control">
                 
                     <div class="form-group">
