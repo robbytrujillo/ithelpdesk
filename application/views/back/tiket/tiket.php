@@ -62,7 +62,8 @@
                                                 echo '<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-reply" id="reply_message" 
                                                 data-tiket_id     = "' . $tkt->id_tiket . '"
                                                 data-id_tiket_id = "' . $tkt->id_tiket . '"
-                                                data-judul_tiket = "' . $tkt->id_tiket . '"
+                                                data-judul_tiket = "' . $tkt->judul_tiket . '"
+                                                data-deskripsi = "' . $tkt->deskripsi . '"
                                                 class="btn btn-warning">
                                                     Reply Message
                                                 </a>';
