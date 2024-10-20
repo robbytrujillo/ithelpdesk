@@ -123,8 +123,14 @@ class Tiket extends CI_Controller {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger">'. $error['error'] . '</div>');
                     $this->index();
                 } else {
-                    $gambar_tanggapan = $this->upload->data();
+                    if ($this->input->post('id_tiket')) {
+                        $data = array(
+                            'status_tiket' => 2,
+                        );
+                        $this->M_tiket->update($this->input->post('id_tiket'), $data);
+                    }
 
+                    $gambar_tanggapan = $this->upload->data();
                     $data = array(
                         'tiket_id'          => $this->input->post('id_tiket'),
                         'tanggapan'         => $this->input->post('tanggapan'),
@@ -137,8 +143,15 @@ class Tiket extends CI_Controller {
                     redirect('tiket','refresh');
                 }
             } else {
+                if ($this->input->post('id_tiket')) {
+                        $data = array(
+                            'status_tiket' => 2,
+                        );
+                        $this->M_tiket->update($this->input->post('id_tiket'), $data);
+                    }
+
                 $data = array(
-                    'tiket_id'          => $this->input->post('tiket_id'),
+                    'tiket_id'          => $this->input->post('id_tiket'),
                     'tanggapan'         => $this->input->post('tanggapan'),
                     'waktu_tanggapan'   => date('Y-m-d'),
                 );
