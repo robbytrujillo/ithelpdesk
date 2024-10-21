@@ -55,7 +55,7 @@
                                                 echo '<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-tiket" id="select_tiket" 
                                                 data-id_tiket     = "' . $tkt->id_tiket . '"
                                                 data-status_tiket = "' . $tkt->status_tiket . '"
-                                                class="btn btn-success">
+                                                class="btn btn-success btn-sm">
                                                     Confirm
                                                 </a>';
                                             } else if ($tkt->status_tiket == '1') {
@@ -64,8 +64,15 @@
                                                 data-id_tiket_id = "' . $tkt->id_tiket . '"
                                                 data-judul_tiket = "' . $tkt->judul_tiket . '"
                                                 data-deskripsi = "' . $tkt->deskripsi . '"
-                                                class="btn btn-warning">
+                                                class="btn btn-warning btn-sm">
                                                     Reply Message
+                                                </a>';
+                                            } else if ($tkt->status_tiket == '2') {
+                                                echo '<a href="javascript:void(0);" data-toggle="modal" data-target="#modal-closetiket" id="closetiket" 
+                                                data-closetiket     = "' . $tkt->id_tiket . '"
+                                                data-closestatus = "' . $tkt->status_tiket . '"
+                                                class="btn btn-primary btn-sm">
+                                                    Close
                                                 </a>';
                                             }
 
@@ -182,6 +189,29 @@
                         <input type="file" name="gambar_tanggapan" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary btn-sm"> Reply Message </button>
+                <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal fade" id="modal-closetiket">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Yakin Close Tiket ini?</h5>
+            <button class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    &times;
+                </span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form action="<?= base_url('tiket/save_close_tiket') ?>" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="id_tiket" id="id_tiket" class="form-control">
+                    <input type="hidden" name="status_tiket" value="1" class="form-control">
+                <button type="submit" class="btn btn-primary btn-sm"> Save </button>
                 <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
             </form>
         </div>
