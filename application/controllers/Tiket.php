@@ -189,6 +189,9 @@ class Tiket extends CI_Controller {
         if ($data['tiket']) {
             $data['title'] = 'Detail Tiket'. $data['tiket']->no_tiket;
             $this->template->load('back/template', 'back/tiket/detail_tiket', $data);
+        } else {
+            $this->session->set_flashdata('message','<div class="alert alert-info">Data Tiket tidak ada!</div>');
+            redirect('tiket','refresh');
         }
     }
 
