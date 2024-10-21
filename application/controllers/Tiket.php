@@ -163,6 +163,26 @@ class Tiket extends CI_Controller {
         }
     }
 
+    function save_close_tiket() {
+        $this->form_validation->set_rules('status_tiket', 'Status Tiket', 'trim|required');
+
+        $this->form_validation->set_message('required','{field} Harus diisi');
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->index();
+        } else {
+            $data = array(
+                'status_tiket' => $this->input->post('status_tiket'),
+            );
+
+            $this->M_tiket->update($this->input->post('id_tiket'), $data);
+            
+            $this->session->set_flashdata('message','<div class="alert alert-info">Status Tiket Berhasil di Close</div>');
+            redirect('tiket','refresh');
+        }
+    }
+
     function detail_tiket($no_tiket) {
         $data['tiket'] = $this->M_tiket->get_no_tiket($no_tiket);
         

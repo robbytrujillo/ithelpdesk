@@ -209,9 +209,9 @@
         </div>
         <div class="modal-body">
             <form action="<?= base_url('tiket/save_close_tiket') ?>" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id_tiket" id="id_tiket" class="form-control">
-                    <input type="hidden" name="status_tiket" value="1" class="form-control">
-                <button type="submit" class="btn btn-primary btn-sm"> Save </button>
+                    <input type="hidden" name="id_tiket" id="closetiket" class="form-control">
+                    <input type="hidden" name="status_tiket" value="3" class="form-control">
+                <button type="submit" class="btn btn-primary btn-sm"> Close Tiket </button>
                 <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
             </form>
         </div>
@@ -239,6 +239,14 @@
             $('#id_tiket_id').val(id_tiket_id)
             $('#judul_tiket').val(judul_tiket)
             $('#deskripsi').val(deskripsi)
+        })
+
+        $(document).on('click','#select_tiket', function() {
+            var id_tiket     = $(this).data('id_tiket')
+            var status_tiket = $(this).data('status_tiket')
+
+            $('#id_tiket').val(id_tiket)
+            $('#status_tiket').val(status_tiket)
         })
     })
 </script>
