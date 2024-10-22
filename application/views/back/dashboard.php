@@ -39,7 +39,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3><?= $tiket_wait; ?></h3>
 
                 <p>Menunggu Respon</p>
               </div>

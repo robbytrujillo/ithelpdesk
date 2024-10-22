@@ -26,6 +26,10 @@ class M_karyawan extends CI_Model {
         $this->db->delete('users');
     }
 
+    function jumlah_user() {
+        
+    }
+
     // public function getPasswordByEmail($email) {
     //     $this->db->select('password');
     //     $this->db->from('users');

@@ -113,4 +113,8 @@ class Karyawan extends CI_Controller {
             redirect('karyawan','refresh');
         }
     }
+
+    function user() {
+
+    }
 }

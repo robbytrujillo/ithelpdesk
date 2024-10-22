@@ -54,4 +54,20 @@ class M_tiket extends CI_Model {
         $this->db->where('id_tiket', $id);
         $this->db->delete('tiket');
     }
+
+    function tiket_wait() {
+        $this->db->select('*');
+        $this->db->from('tiket');
+        $this->db->where('status_tiket', 0);
+
+        return $this->db->get()->num_rows();
+    }
+
+    function tiket_proses() {
+        
+    }
+
+    function tiket_close() {
+
+    }
 }
