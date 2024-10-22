@@ -64,10 +64,18 @@ class M_tiket extends CI_Model {
     }
 
     function tiket_proses() {
-        
+        $this->db->select('*');
+        $this->db->from('tiket');
+        $this->db->where('status_tiket', 1);
+
+        return $this->db->get()->num_rows();
     }
 
     function tiket_close() {
+        $this->db->select('*');
+        $this->db->from('tiket');
+        $this->db->where('status_tiket', 3);
 
+        return $this->db->get()->num_rows();
     }
 }

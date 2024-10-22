@@ -27,7 +27,11 @@ class M_karyawan extends CI_Model {
     }
 
     function jumlah_user() {
-        
+        $this->db->select('*');
+        $this->db->from('users');
+        // $this->db->where('status_tiket', 3);
+
+        return $this->db->get()->num_rows();
     }
 
     // public function getPasswordByEmail($email) {

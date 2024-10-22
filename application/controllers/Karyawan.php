@@ -114,7 +114,4 @@ class Karyawan extends CI_Controller {
         }
     }
 
-    function user() {
-
-    }
 }
