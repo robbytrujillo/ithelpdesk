@@ -23,7 +23,7 @@
                                 <label>Tanggal Akhir</label>
                                 <input type="date" name="tgl_akhir" id="tgl_akhir" value="<?= date('Y-m-d') ?>" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-sm"> Print </button>
+                            <button type="submit" name="submit" class="btn btn-primary btn-sm"> Print </button>
                         </form>
                     </div>
                 </div>
