@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="<?= base_url('dashboard') ?>" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -423,11 +423,11 @@
           </li>
           <li class="nav-header">LAPORAN TICKET</li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="<?= base_url('laporan') ?>" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Laporan
-                <i class="fas fa-angle-left right"></i>
+                <!-- <i class="fas fa-angle-left right"></i> -->
               </p>
             </a>
           </li>
