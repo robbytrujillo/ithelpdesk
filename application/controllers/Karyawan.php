@@ -114,4 +114,15 @@ class Karyawan extends CI_Controller {
         }
     }
 
+    function profile($id) {
+        $data['karyawan'] = $this->M_karyawan->get_id_karyawan($id);
+        
+        if ($data['karyawan']) {
+            $data['title'] = 'Profile User';
+            $this->template->load('back/tempale', 'back/profile' , $data);
+        } else {
+            redirect('dashboard', 'refresh');
+        }
+    }
+
 }

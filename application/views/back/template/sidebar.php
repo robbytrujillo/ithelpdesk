@@ -433,7 +433,7 @@
           </li>
           <li class="nav-header">PROFILE</li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url() ?>assets/back/#" class="nav-link">
+            <a href="<?= base_url('karyawan/profile' . $this->session->id_user); ?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile User
