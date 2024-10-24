@@ -119,7 +119,9 @@ class Karyawan extends CI_Controller {
         
         if ($data['karyawan']) {
             $data['title'] = 'Profile User';
-            $this->template->load('back/tempale', 'back/profile' , $data);
+            $data['jabatan'] = $this->M_jabatan->get_jabatan();
+            $data['divisi'] = $this->M_divisi->get_divisi();
+            $this->template->load('back/template', 'back/profile' , $data);
         } else {
             redirect('dashboard', 'refresh');
         }
