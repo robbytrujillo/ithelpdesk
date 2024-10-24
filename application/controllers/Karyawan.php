@@ -127,4 +127,14 @@ class Karyawan extends CI_Controller {
         }
     }
 
+    function update_profile() {
+        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_message('required','{field} Harus diisi');
+        $this->form_validation->set_message('valid_email','{field} anda harus valid');
+
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
+
+
+    }
+
 }
