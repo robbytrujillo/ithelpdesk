@@ -17,9 +17,10 @@
                     </div>
                     <div class="card-body">
                         <?= validation_errors() ?>
-                        <form action="" method="POST">
+                        <form action="<?= base_url('karyawan/update_profile') ?>" method="POST">
                             <div class="input-group mb-3">
-                                <input type="text" name="nik" value="<?= $karyawan->nik ?>" class="form-control" placeholder="NIK">
+                                <input type="hidden" name="id_users" value="<?= $karyawan->id_users ?>" class="form-control">
+                                <input type="text" name="nik" value="<?= $karyawan->nik ?>" class="form-control" placeholder="NIK" readonly>
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -74,8 +75,8 @@
                                     <?php } ?>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-sm"> Save </button>
-                            <button type="reset" class="btn btn-danger btn-sm"> Reset </button>
+                            <button type="submit" class="btn btn-primary btn-sm"> Update </button>
+                            <!-- <button type="reset" class="btn btn-danger btn-sm"> Reset </button> -->
                         </form>
                     </div>
                 </div>
