@@ -134,7 +134,28 @@ class Karyawan extends CI_Controller {
 
         $this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
 
+        if ($this->form_validation->run() == TRUE) {
+            $data = array(
+                'nik'=> $this->input->post('nik'),
+                'username'=> $this->input->post('username'),
+                'email'=> $this->input->post('email'),
+                'jabatan_id'=> $this->input->post('jabatan_id'),
+                'divisi_id'=> $this->input->post('divisi_id'),
+                // 'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+                // 'status_user' => $this->input->post('status_user'),
+                // 'level_user' => $this->input->post('level_user'),
+            );
 
+            // var_dump($data);
+
+            $this->M_karyawan->update($this->input->post('id_users'), $data);
+
+            $this->session->set_flashdata('message','<div class="alert alert-info">Data Berhasil Di Ubah</div>');
+
+            redirect('karyawan/profile/' . $this->session->id_users);
+        } else {
+            $this->add_karyawan();
+        }
     }
 
 }

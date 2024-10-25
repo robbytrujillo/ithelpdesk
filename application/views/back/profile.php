@@ -17,6 +17,7 @@
                     </div>
                     <div class="card-body">
                         <?= validation_errors() ?>
+                        <?= $this->session->flashdata('message') ?>
                         <form action="<?= base_url('karyawan/update_profile') ?>" method="POST">
                             <div class="input-group mb-3">
                                 <input type="hidden" name="id_users" value="<?= $karyawan->id_users ?>" class="form-control">
