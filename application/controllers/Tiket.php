@@ -3,6 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tiket extends CI_Controller {
+    public function __construct() {
+        parent::__construct();
+        cek_login();
+    }
     public function index() {
         $data['tiket'] = $this->M_tiket->get_tiket();
         $data['no_tiket'] = $this->M_tiket->no_tiket();

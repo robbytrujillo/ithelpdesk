@@ -3,6 +3,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Karyawan extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        cek_login();
+    }
     public function index() {
         $data['karyawan'] = $this->M_karyawan->get_karyawan();
 
@@ -115,6 +120,7 @@ class Karyawan extends CI_Controller {
     }
 
     function profile($id) {
+        
         $data['karyawan'] = $this->M_karyawan->get_id_karyawan($id);
         
         if ($data['karyawan']) {
