@@ -8,6 +8,6 @@ function cek_login() {
 
     if ($email == NULL) {
         $CI->session->set_flashdata('message', '<div class="alert alert-danger"> Harus Login Dulu! </div>');
-        redirect('login');
+        redirect('auth/login');
     }
 }
