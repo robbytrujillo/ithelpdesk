@@ -119,7 +119,6 @@
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Data Ticket
-                <!-- <i class="fas fa-angle-left right"></i> -->
               </p>
             </a>
             
