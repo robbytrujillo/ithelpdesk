@@ -24,8 +24,8 @@ class Karyawan extends CI_Controller {
         $this->form_validation->set_rules('nik', 'NIK', 'trim|is_unique[users.nik]|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[users.email]|required');
-        // $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
-        // $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|matches[password]|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required');
+        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|matches[password]|required');
 
         $this->form_validation->set_message('required','{field} Harus diisi');
         $this->form_validation->set_message('valid_email','{field} anda harus valid');
@@ -39,7 +39,7 @@ class Karyawan extends CI_Controller {
                 'email'=> $this->input->post('email'),
                 'jabatan_id'=> $this->input->post('jabatan_id'),
                 'divisi_id'=> $this->input->post('divisi_id'),
-                // 'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+                'password'=> password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                 'status_user' => 1,
                 'level_user' => 1,
             );
