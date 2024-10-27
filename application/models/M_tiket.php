@@ -7,6 +7,11 @@ class M_tiket extends CI_Model {
         return $this->db->get('tiket')->result();
     }
 
+    function tiket_user() {
+        $this->db->where('tiket.user_id', $this->session->userdata('id_users'));
+        return $this->db->get('tiket')->result();
+    }
+
     function get_id_tiket($id) {
         $this->db->where('id_tiket', $id);
         return $this->db->get('tiket')->row();
